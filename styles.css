@@ -1,7 +1,8 @@
-html{
-    height: 100%;
-}
-body{
+* {
+    box-sizing: border-box;
+  }
+
+html,body{
     height: 100%;
 }
 .container.navbar{
@@ -15,7 +16,32 @@ body{
     flex-direction: column;
     justify-content:flex-end;
     padding-right: 20px;
-    border: none;
+    border-radius: inherit;
+}
+.navbar
+    .logo-info{
+        border: 2px solid #FFF;
+        height: 60px;
+        width:100px;
+		top: 0px;
+		margin: 20px 0;
+    }
+    .logo-info h3{
+        color:#FFF;
+        font-size: 24px;
+		text-align: center;
+    }
+
+
+.logo-info{
+    position: absolute;
+    top: 0;
+}
+.nav-menu{
+    color: #FFF;
+    padding: 14px;
+    bottom: 60px;
+	bottom: 10px;
 }
 .navbar a {
     color: chocolate;
@@ -31,10 +57,10 @@ body{
 
 .p-image img{
     position:absolute;
-    left: 130px;
-    height: 478px;
-    top: 60px;
-    width: 344px;
+    left: 132px;
+    height: 400px;
+    top: 78px;
+    width: 314px;
     border: 1px solid none;
     border-radius: 8px;
     box-shadow: 18px 13px 10px 6px rgba(216,175,188,1);
@@ -80,3 +106,53 @@ h5.res{
     color: #111;
     padding: 6px 22px;
 }
+
+/*@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@
+Medial queries
+@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.container.navbar{
+    position: relative;
+    background-color: #2c0770;
+    width: 20%;
+    height: 100%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:flex-end;
+    padding-right: 20px;
+    border-radius: inherit;
+}
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	html body{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.container.navbar{
+    position:static;
+    background-color: #2c0770;
+    width: 100%;
+   	display: flex;
+    flex-wrap: wrap;
+	top: 0;
+    justify-content:flex-end;
+    padding-right: 20px;
+    border-radius: inherit;
+}
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
